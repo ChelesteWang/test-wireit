@@ -14,3 +14,12 @@ wireit 可以根据依赖关系图，并行安全的运行脚本。
 <img width="241" alt="image" src="https://user-images.githubusercontent.com/40495740/165771773-6cf33a5d-0afc-4c59-9327-406a9c35ef7c.png">
 
 默认情况下，对于系统上检测到的每个CPU核心，WireIt最多将并行运行4个脚本。要更改此默认值，请将WireIt_Parallel Environall Varible设置为正整数，或无限运行。如果您在大型建筑中遇到资源饥饿，则可能需要降低此数字。例如，一次仅运行一个脚本：
+
+适用于大型 monorepo 的构建
+
+如基础组件库与业务组件库的发布流程
+
+- 基础组件打包
+- 业务组件依赖基础组件打包
+- 组件 lint (如果有问题怎么办)
+- 组件 test (如果有问题怎么办)
